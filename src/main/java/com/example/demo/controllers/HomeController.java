@@ -18,14 +18,14 @@ public class HomeController {
     @RequestMapping("/")
     public Map<String, String> getStatus() {
         Map<String, String> map = new HashMap<String, String>();
-        map.put("app-version", appVersion);
+        map.put("Openshift app-version", appVersion);
         return map;
     }
 
     @GetMapping
     @RequestMapping("/hello")
     public String getHello() {
-        return "Hello World: " + appVersion;
+        return "Hello Openshift World: " + appVersion;
     }
 
 }
