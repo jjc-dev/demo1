@@ -15,7 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 		<imageName>jjcdev/switch</imageName>
 	</properties>
 
@@ -47,7 +47,7 @@
 						<image>jjcdev/switch</image>
 					</to>
 					<from>
-						<image>openjdk:8-jdk-alpine</image>
+						<image>openjdk:11.0-jdk-slim</image>
 					</from>
 					<container>
 						<ports>
