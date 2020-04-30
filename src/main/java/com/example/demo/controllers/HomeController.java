@@ -20,14 +20,14 @@ public class HomeController {
     @RequestMapping("/")
     public Map<String, String> getStatus() {
         Map<String, String> map = new HashMap<String, String>();
-        map.put("This is the Openshift switch app-version", appVersion + " as of " + dateFormat.format(new Date()));
+        map.put("Openshift switch app-version", appVersion + " as of " + dateFormat.format(new Date()));
         return map;
     }
 
     @GetMapping
     @RequestMapping("/hello")
     public String getHello() {
-        return "Say Hello Openshift World to the switch app with : " + appVersion + " as of "  + dateFormat.format(new Date());
+        return "Hello Openshift World using the switch app version : " + appVersion + " as of "  + dateFormat.format(new Date());
     }
 
 }
