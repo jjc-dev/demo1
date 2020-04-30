@@ -16,20 +16,20 @@ public class HomeController {
     @Value("${app.version}")
     private String appVersion;
     private Locale locale = new Locale("en", "GB");
-    DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.DEFAULT, locale);
+    DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, locale);
     
     @GetMapping
     @RequestMapping("/")
     public Map<String, String> getStatus() {
         Map<String, String> map = new HashMap<String, String>();
-        map.put("The Openshift app-version", appVersion + " " + dateFormat.format(new Date()));
+        map.put("This is the Openshift switch app-version", appVersion + " as of " + dateFormat.format(new Date()));
         return map;
     }
 
     @GetMapping
     @RequestMapping("/hello")
     public String getHello() {
-        return "Hello Openshift World: " + appVersion + " "  + dateFormat.format(new Date());
+        return "Say Hello Openshift World to the switch app with : " + appVersion + " as of "  + dateFormat.format(new Date());
     }
 
 }
