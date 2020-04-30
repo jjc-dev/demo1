@@ -1,9 +1,8 @@
 package com.example.demo.controllers;
 
-import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -15,8 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @Value("${app.version}")
     private String appVersion;
-    private Locale locale = new Locale("en", "GB");
-    DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, locale);
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy hh:mm:ss"); 
     
     @GetMapping
     @RequestMapping("/")
